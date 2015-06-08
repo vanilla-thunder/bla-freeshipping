@@ -1,0 +1,11 @@
+{
+  "name": "bla-vskfreiab OXID Module",
+  "version": "0.9.0",
+  "homepage": "http://marat.ws/bla-vskfreiab/",
+  "private": true,
+  "main": "copy_this/modules/bla/",
+  "ignore":"",
+  "dependencies": {
+    "bla-tinymce": "https://github.com/vanilla-thunder/bla-vskfreiab.git#module"
+  }
+}
