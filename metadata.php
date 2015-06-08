@@ -1,7 +1,22 @@
 <?php
 
 /**
- * ###LICENCE###
+ *	[bla] VSK-frei ab ..€ MOdule for OXID eShop
+ *  Hinweis über den fehlenden Restbetrag für den kostenlosen Versand
+ *  Copyright (C) 2015  bestlife AG
+ *
+ *  This program is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation, either version 3 of the License, or
+ *  (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  **/
 
 $sMetadataVersion = '1.1';
@@ -45,13 +60,6 @@ $aModule          = array(
             'type'     => 'str',
             'value'    => '50',
             'position' => 1
-        ),
-        array(
-            'group'    => 'vskfreiMain',
-            'name'     => 'sBlaVSKfreiVersandkosten',
-            'type'     => 'str',
-            'value'    => '4,95',
-            'position' => 2
         )
     )
 );
