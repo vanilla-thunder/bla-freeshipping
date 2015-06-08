@@ -6,6 +6,6 @@
   "main": "copy_this/modules/bla/",
   "ignore":"",
   "dependencies": {
-    "bla-tinymce": "https://github.com/vanilla-thunder/bla-vskfreiab.git#module"
+    "bla-vskfreiab": "https://github.com/vanilla-thunder/bla-vskfreiab.git#module"
   }
 }
