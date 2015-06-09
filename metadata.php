@@ -37,13 +37,13 @@ $aModule          = array(
     'blocks'      => array(
         array(
             'template' => 'widget/minibasket/minibasket.tpl',
-            'block'    => 'widget_minibasket',
-            'file'     => '/application/views/blocks/widget_minibasket.tpl'
+            'block'    => 'widget_minibasket_total',
+            'file'     => '/views/blocks/widget_minibasket.tpl'
         ),
         array(
             'template' => 'page/checkout/basket.tpl',
             'block'    => 'basket_vskfrei',
-            'file'     => '/application/views/blocks/basket_vskfrei.tpl'
+            'file'     => '/views/blocks/basket_vskfrei.tpl'
         ),
     ),
     'settings'    => array(
