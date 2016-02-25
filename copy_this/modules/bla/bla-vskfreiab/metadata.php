@@ -1,9 +1,9 @@
 <?php
 
 /**
- *	[bla] VSK-frei ab ..€ MOdule for OXID eShop
- *  Hinweis über den fehlenden Restbetrag für den kostenlosen Versand
- *  Copyright (C) 2015  bestlife AG
+ *	bestlife AG - "VSK-frei ab ... EUR" Hinweis für OXID eShop
+ *  Copyright (C) 2016  bestlife AG
+ *  info:  oxid@bestlife.ag
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -25,12 +25,12 @@ $aModule          = array(
     'title'       => '<strong style="color:#95b900;font-size:125%;">best</strong><strong style="color:#c4ca77;font-size:125%;">life</strong> <strong>VSK-frei ab ...</strong>',
     'description' => 'blendet dezente Hinweise für den Shopbesucher ein, dass der Versand ab einem bestimmten Wert des Warenkorbs kostenlos ist.',
     'thumbnail'   => 'bestlife.png',
-    'version'     => '0.9.0 (2015-06-02)',
+    'version'     => '1.0.0 (2016-02-25)',
     'author'      => 'Marat Bedoev, bestlife AG',
     'email'       => 'oxid@bestlife.ag',
     'url'         => 'http://www.bestlife.ag',
     'extend'      => array(
-        'oxviewconfig' => 'bla/bla-vskfreiab/core/blavskfreioxviewconfig'
+        'oxviewconfig' => 'bla/bla-vskfreiab/extend/blavskfreioxviewconfig'
     ),
     'files'       => array(),
     'templates'   => array(),
@@ -38,12 +38,12 @@ $aModule          = array(
         array(
             'template' => 'widget/minibasket/minibasket.tpl',
             'block'    => 'widget_minibasket_total',
-            'file'     => '/views/blocks/widget_minibasket.tpl'
+            'file'     => '/application/views/blocks/widget_minibasket.tpl'
         ),
         array(
             'template' => 'page/checkout/basket.tpl',
-            'block'    => 'basket_vskfrei',
-            'file'     => '/views/blocks/basket_vskfrei.tpl'
+            'block'    => 'checkout_basket_next_step_top',
+            'file'     => '/application/views/blocks/checkout_basket_next_step_top.tpl'
         ),
     ),
     'settings'    => array(
