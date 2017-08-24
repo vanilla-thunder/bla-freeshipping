@@ -1,8 +1,8 @@
 <?php
 
 /**
- *	bestlife AG - "VSK-frei ab ... EUR" Hinweis für OXID eShop
- *  Copyright (C) 2016  bestlife AG
+ *	bla-freeshipping
+ *  Copyright (C) 2017  bestlife AG
  *  info:  oxid@bestlife.ag
  *
  *  This program is free software: you can redistribute it and/or modify
@@ -20,46 +20,44 @@
  **/
 
 $sMetadataVersion = '1.1';
-$aModule          = array(
-    'id'          => 'bla-vskfreiab',
+$aModule          = [
+    'id'          => 'bla-freeshipping',
     'title'       => '<strong style="color:#95b900;font-size:125%;">best</strong><strong style="color:#c4ca77;font-size:125%;">life</strong> <strong>VSK-frei ab ...</strong>',
-    'description' => 'blendet dezente Hinweise für den Shopbesucher ein, dass der Versand ab einem bestimmten Wert des Warenkorbs kostenlos ist.',
-    'thumbnail'   => 'bestlife.png',
-    'version'     => '1.0.0 (2016-02-25)',
+    'description' => 'displays configurable "free shipping for orders over ...€" notice in basket and minibasket',
+    'thumbnail'   => 'application/bestlife.png',
+    'version'     => '0.1.1 ( 2017-8-24 )',
     'author'      => 'Marat Bedoev, bestlife AG',
     'email'       => 'oxid@bestlife.ag',
-    'url'         => 'http://www.bestlife.ag',
-    'extend'      => array(
-        'oxviewconfig' => 'bla/bla-vskfreiab/extend/blavskfreioxviewconfig'
-    ),
-    'files'       => array(),
-    'templates'   => array(),
-    'blocks'      => array(
-        array(
+    'url'         => 'https://github.com/vanilla-thunder/bla-freeshipping',
+    'extend'      => [ 'oxviewconfig' => 'bla/bla-freeshipping/application/extend/oxviewconfigblafreeshipping' ],
+    'files'       => [],
+    'templates'   => [],
+    'blocks'      => [
+        [
             'template' => 'widget/minibasket/minibasket.tpl',
             'block'    => 'widget_minibasket_total',
-            'file'     => '/application/views/blocks/widget_minibasket.tpl'
-        ),
-        array(
+            'file'     => '/application/views/blocks/widget_minibasket_total.tpl'
+        ],
+        [
             'template' => 'page/checkout/basket.tpl',
-            'block'    => 'checkout_basket_next_step_top',
-            'file'     => '/application/views/blocks/checkout_basket_next_step_top.tpl'
-        ),
-    ),
-    'settings'    => array(
-        array(
-            'group'    => 'vskfreiMain',
-            'name'     => 'iBlaVSKfreiAb',
+            'block'    => 'basket_btn_next_bottom',
+            'file'     => '/application/views/blocks/basket_btn_next_bottom.tpl'
+        ],
+    ],
+    'settings'    => [
+        [
+            'group'    => 'blaFreeshippingMain',
+            'name'     => 'iBlaFreeShippingOver',
             'type'     => 'str',
             'value'    => '80',
             'position' => 0
-        ),
-        array(
-            'group'    => 'vskfreiMain',
-            'name'     => 'iBlaVSKfreiAbStart',
+        ],
+        [
+            'group'    => 'blaFreeshippingMain',
+            'name'     => 'iBlaFreeShippingTreshold',
             'type'     => 'str',
             'value'    => '50',
             'position' => 1
-        )
-    )
-);
+        ]
+    ]
+];

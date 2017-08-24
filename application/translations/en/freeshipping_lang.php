@@ -1,8 +1,8 @@
 <?php
 
 /**
- *	bestlife AG - "VSK-frei ab ... EUR" Hinweis für OXID eShop
- *  Copyright (C) 2016  bestlife AG
+ *    bla-freeshipping
+ *  Copyright (C) 2017  bestlife AG
  *  info:  oxid@bestlife.ag
  *
  *  This program is free software: you can redistribute it and/or modify
@@ -19,19 +19,9 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  **/
 
-class blaVSKfreiOxViewConfig extends blaVSKfreiOxViewConfig_parent
-{
-    public function vskfreiab()
-    {
-        return intval(oxRegistry::getConfig()->getConfigParam( "iBlaVSKfreiAb" ));
-    }
-    public function vskfreistart()
-    {
-        return intval(oxRegistry::getConfig()->getConfigParam( "iBlaVSKfreiAbStart" ));
-    }
-    public function vskfreivsk()
-    {
-        return oxRegistry::getConfig()->getConfigParam( "sBlaVSKfreiVersandkosten" );
-    }
-}
-
+$aLang = [
+    'charset'                      => 'UTF-8',
+    'FREE_SHIPPING_OVER'           => 'Free shipping on orders over %s!',
+    'ORDER_MORE_FOR_FREE_SHIPPING' => 'Order for only <b>%s</b> more to get free shipping.',
+    'YOU_SAVE_SHIPPING_COSTS'      => 'You save <b>%s</b> shipping costs.'
+];

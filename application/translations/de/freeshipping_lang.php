@@ -1,8 +1,8 @@
 <?php
 
 /**
- *	bestlife AG - "VSK-frei ab ... EUR" Hinweis für OXID eShop
- *  Copyright (C) 2016  bestlife AG
+ *    bla-freeshipping
+ *  Copyright (C) 2017  bestlife AG
  *  info:  oxid@bestlife.ag
  *
  *  This program is free software: you can redistribute it and/or modify
@@ -18,9 +18,10 @@
  *  You should have received a copy of the GNU General Public License
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  **/
-$aLang = array(
+
+$aLang = [
     'charset'                      => 'UTF-8',
     'FREE_SHIPPING_OVER'           => 'Ab %s Warenwert übernehmen wir die Versandkosten!',
     'ORDER_MORE_FOR_FREE_SHIPPING' => 'Bestellen Sie für nur <b>%s</b> mehr für den kostenlosen Versand.',
-	'YOU_SAVE_SHIPPING_COSTS'      => 'So sparen Sie <b>%s</b> Versandkosten.'
-);
+    'YOU_SAVE_SHIPPING_COSTS'      => 'So sparen Sie <b>%s</b> Versandkosten.'
+];
