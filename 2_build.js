@@ -1,5 +1,5 @@
 var fs = require('fs'),
-    r = require("request"),
+    oxmodule = require('./package.json'),
     replace = require('replace'),
     runner = require('child_process');
 
@@ -13,78 +13,52 @@ var shell = function (command) {
     );
 };
 
-var version = process.argv[2];
-if (!version) {
-    console.log('hallo bitte!!! Version???')
-    process.exit(9);
-}
-
 // cleanup
-shell("rm -rf _module/application");
-shell("rm -rf _module/extend");
-shell("rm -rf _master/copy_this/modules/bla/*");
+shell("rm -rf _module/*");
+shell("rm -rf _master/copy_this/modules/*");
 console.log("");
 console.log("     cleanup finished");
 
-// oxversion
-r('http://mb-dev.de/v/?raw=1&v=' + version).pipe(fs.createWriteStream('_module/version.jpg'));
-
 // copy files
 shell("cp -r application _module/application");
-shell("cp -r extend _module/extend");
 shell("cp metadata.php _module/metadata.php");
 shell("cp README.md _module/README.md");
 shell("cp LICENSE _module/LICENSE");
-console.log("     new files copied");
+console.log("     module files copied");
 
 // compile some files
-var module = '"VSK-frei ab ... EUR" Hinweis für OXID eShop',
-    company = 'bestlife AG',
-    email = 'oxid@bestlife.ag',
-    year = '2016';
+var replaces = {
+    'empalte':'emplate',
+    'NAME': oxmodule.name,
+    'DESCRIPTION': oxmodule.description,
+    'VERSION': oxmodule.version+' ( '+new Date().toLocaleDateString() + ' )',
+    'AUTHOR': oxmodule.author,
+    'VENDOR': oxmodule.vendor,
+    'COMPANY': oxmodule.company,
+    'EMAIL': oxmodule.email,
+    'URL': oxmodule.url,
+    'YEAR': new Date().getFullYear()
+};
 
-replace({
-    regex: "###_MODULE_###",
-    replacement: module,
-    paths: ['./_module'],
-    recursive: true,
-    silent: true
-});
-replace({
-    regex: "###_VERSION_###",
-    replacement: version,
-    paths: ['./_module'],
-    recursive: true,
-    silent: true
-});
-replace({
-    regex: "###_COMPANY_###",
-    replacement: company,
-    paths: ['./_module'],
-    recursive: true,
-    silent: true
-});
-replace({
-    regex: "###_EMAIL_###",
-    replacement: email,
-    paths: ['./_module'],
-    recursive: true,
-    silent: true
-});
-replace({
-    regex: "###_YEAR_###",
-    replacement: year,
-    paths: ['./_module'],
-    recursive: true,
-    silent: true
-});
+for(var x in replaces)
+{
+    replace({
+        regex: "___"+x+"___",
+        replacement: replaces[x],
+        paths: ['./_module'],
+        recursive: true,
+        silent: true
+    });
+}
 
 process.on('exit', function (code) {
     console.log("     replacing complete");
     // copy module to master
-    shell("cp -r _module _master/copy_this/modules/bla/bla-vskfreiab");
-    shell("rm -rf _master/copy_this/modules/bla/bla-vskfreiab/.git");
+    shell("mkdir _master/copy_this/modules/"+oxmodule.vendor);
+    shell("cp -rf _module _master/copy_this/modules/"+oxmodule.vendor+"/"+oxmodule.name);
+    shell("rm -rf _master/copy_this/modules/"+oxmodule.vendor+"/"+oxmodule.name+"/.git");
     shell("cp _module/README.md _master/README.md");
+    shell("cp LICENSE _master/LICENSE");
     console.log("");
     console.log("     build complete! made my day!");
     console.log("");

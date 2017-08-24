@@ -1,9 +1,9 @@
 <?php
 
 /**
- *	###_COMPANY_### - ###_MODULE_###
- *  Copyright (C) ###_YEAR_###  ###_COMPANY_###
- *  info:  ###_EMAIL_###
+ *    ___NAME___
+ *  Copyright (C) ___YEAR___  ___COMPANY___
+ *  info:  ___EMAIL___
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -18,9 +18,10 @@
  *  You should have received a copy of the GNU General Public License
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  **/
-$aLang = array(
+
+$aLang = [
     'charset'                      => 'UTF-8',
     'FREE_SHIPPING_OVER'           => 'Ab %s Warenwert übernehmen wir die Versandkosten!',
     'ORDER_MORE_FOR_FREE_SHIPPING' => 'Bestellen Sie für nur <b>%s</b> mehr für den kostenlosen Versand.',
-	'YOU_SAVE_SHIPPING_COSTS'      => 'So sparen Sie <b>%s</b> Versandkosten.'
-);
+    'YOU_SAVE_SHIPPING_COSTS'      => 'So sparen Sie <b>%s</b> Versandkosten.'
+];

@@ -1,24 +1,20 @@
-## ###_COMPANY_### - ###_MODULE_###
-### Modul Version ###_VERSION_###
+### ___NAME___
+Modul Version ___VERSION___
 
 
 Mit diesem Modul können Sie dezente Hinweise im Warenkorb und im Miniwarenkorb einblenden, die den Besucher darüber informieren, dass die Bestellung ab einem bestimmten Warenwert für ihn kostenlos versendet wird.
 Dieser Wert und die Schwelle, ab der die Hinweise eingeblendet werden, kann in den Moduleinstellungen eingestellt werden. Sollte er auch, ohne Witzt jetzt!
 
 ### Installation
-* [https://github.com/vanilla-thunder/bla-vskfreiab/archive/master.zip](https://github.com/vanilla-thunder/bla-vskfreiab/archive/master.zip) herunterladen und entpacken
+* [https://github.com/vanilla-thunder/___NAME___/archive/master.zip](https://github.com/vanilla-thunder/___NAME___/archive/master.zip) herunterladen und entpacken
 * Inhalt von "copy_this" in den Shop hochladen
-
-**oder:**
-* $ cd modules/ 
-* $ mkidir bla && cd bla
-* $ wget https://raw.githubusercontent.com/vanilla-thunder/bla/master/vendormetadata.php
-* $ git clone -b module https://github.com/vanilla-thunder/bla-vskfreiab.git
+* Einstellung "Versandkosten auch dann berechnen, wenn der Kunde noch nicht eingeloggt ist" unter Stammdaten -> Grundeintellungen -> Einstellungen -> Weitere EInstellungen muss aktiv sein!
+* Modul aktivieren und Moduleinstellungen konfigurieren
 
 ### LICENSE AGREEMENT
-   ###_COMPANY_### - ###_MODULE_###  
-   Copyright (C) ###_YEAR_###  ###_COMPANY_###  
-   info:  ###_EMAIL_###  
+   ___NAME___ for OXID eShop 4.10  
+   Copyright (C) ___YEAR___  ___COMPANY___  
+   info:  ___EMAIL___  
   
    This program is free software;  
    you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation;

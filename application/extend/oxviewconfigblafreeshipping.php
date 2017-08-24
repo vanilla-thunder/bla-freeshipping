@@ -1,9 +1,9 @@
 <?php
 
 /**
- *	###_COMPANY_### - ###_MODULE_###
- *  Copyright (C) ###_YEAR_###  ###_COMPANY_###
- *  info:  ###_EMAIL_###
+ *    ___NAME___
+ *  Copyright (C) ___YEAR___  ___COMPANY___
+ *  info:  ___EMAIL___
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -19,19 +19,16 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  **/
 
-class blaVSKfreiOxViewConfig extends blaVSKfreiOxViewConfig_parent
+class oxviewconfigblafreeshipping extends oxviewconfigblafreeshipping_parent
 {
-    public function vskfreiab()
+    public function freeShippingOver()
     {
-        return intval(oxRegistry::getConfig()->getConfigParam( "iBlaVSKfreiAb" ));
+        return intval(oxRegistry::getConfig()->getConfigParam( "iBlaFreeShippingOver" ));
     }
-    public function vskfreistart()
+    public function freeShippingTreshold()
     {
-        return intval(oxRegistry::getConfig()->getConfigParam( "iBlaVSKfreiAbStart" ));
+        return intval(oxRegistry::getConfig()->getConfigParam( "iBlaFreeShippingTreshold" ));
     }
-    public function vskfreivsk()
-    {
-        return oxRegistry::getConfig()->getConfigParam( "sBlaVSKfreiVersandkosten" );
-    }
+
 }
 

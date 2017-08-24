@@ -1,9 +1,12 @@
 {
-  "name": "bla-freeshipping-dev",
-  "version": "0.1.0",
-  "description": "\"free shipping for orders over ...€\" notice in basket and minibasket for OXID eShop CE",
-  "author": "Marat Bedoev, bestlife AG <oxid@bestlife.ag>",
-  "license": "GPL",
+  "name": "bla-freeshipping",
+  "version": "0.1.1",
+  "description": "displays configurable \"free shipping for orders over ...€\" notice in basket and minibasket",
+  "author": "Marat Bedoev",
+  "email": "oxid@bestlife.ag",
+  "vendor": "bla",
+  "company": "bestlife AG",
+  "license": "GPL-3.0",
   "repository": {
     "type": "git",
     "url": "git://github.com/vanilla-thunder/bla-freeshipping.git"
