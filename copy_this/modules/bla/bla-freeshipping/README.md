@@ -1,23 +1,19 @@
-## bestlife AG - "VSK-frei ab ... EUR" Hinweis für OXID eShop
-### Modul Version 1.0.0
+### bla-freeshipping
+Modul Version 0.1.1 ( 2017-8-24 )
 
 
 Mit diesem Modul können Sie dezente Hinweise im Warenkorb und im Miniwarenkorb einblenden, die den Besucher darüber informieren, dass die Bestellung ab einem bestimmten Warenwert für ihn kostenlos versendet wird.
 Dieser Wert und die Schwelle, ab der die Hinweise eingeblendet werden, kann in den Moduleinstellungen eingestellt werden. Sollte er auch, ohne Witzt jetzt!
 
 ### Installation
-* [https://github.com/vanilla-thunder/bla-vskfreiab/archive/master.zip](https://github.com/vanilla-thunder/bla-vskfreiab/archive/master.zip) herunterladen und entpacken
+* [https://github.com/vanilla-thunder/bla-freeshipping/archive/master.zip](https://github.com/vanilla-thunder/bla-freeshipping/archive/master.zip) herunterladen und entpacken
 * Inhalt von "copy_this" in den Shop hochladen
-
-**oder:**
-* $ cd modules/ 
-* $ mkidir bla && cd bla
-* $ wget https://raw.githubusercontent.com/vanilla-thunder/bla/master/vendormetadata.php
-* $ git clone -b module https://github.com/vanilla-thunder/bla-vskfreiab.git
+* Einstellung "Versandkosten auch dann berechnen, wenn der Kunde noch nicht eingeloggt ist" unter Stammdaten -> Grundeintellungen -> Einstellungen -> Weitere EInstellungen muss aktiv sein!
+* Modul aktivieren und Moduleinstellungen konfigurieren
 
 ### LICENSE AGREEMENT
-   bestlife AG - "VSK-frei ab ... EUR" Hinweis für OXID eShop  
-   Copyright (C) 2016  bestlife AG  
+   bla-freeshipping for OXID eShop 4.10  
+   Copyright (C) 2017  bestlife AG  
    info:  oxid@bestlife.ag  
   
    This program is free software;  
